@@ -15,7 +15,7 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
 set(TS_FILES Project_en_CA.ts)
 
 set(PROJECT_SOURCES
-        main.cpp
+
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
@@ -26,6 +26,24 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Project
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+
+        main.cpp
+        main.cpp
+        batiment.h
+        Maison.h
+        Usine.h
+
+        Parc.h
+
+        Ville.h
+        dialog.h dialog.cpp dialog.ui
+        batiment.cpp
+        ville.cpp
+
+
+
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Project APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
